@@ -1,0 +1,45 @@
+html body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    
+    background-color: #2b2d30;
+    display: flex;
+    
+}
+
+#rooms {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    
+    grid-gap: 0;
+    
+    aspect-ratio: 1/1;
+    max-height: 70vh;
+    max-width: 70vw;
+    
+    background-color: black;
+}
+
+.room {
+    aspect-ratio: 1/1;
+    
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    
+    filter: brightness(80%);
+    transition: 130ms ease-in-out;
+}
+
+.room:hover {
+    filter: brightness(100%) saturate(150%);
+    transition: 130ms ease-in-out;
+}
+
+.room img {
+    height: 100%;
+    width: 100%;
+}

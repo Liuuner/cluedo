@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Cluedo</title>
+		<link rel="stylesheet" href="/style.css">
+	</head>
+	<body>
+		<ul>
+			<li th:each="person : ${persons}">
+				<span th:text="${person.salutation}"> Salutation </span>
+				<span th:text="${person.lastName}"> Last Name </span>
+			</li>
+		</ul>
+		
+		<ul>
+			<li th:each="weapon : ${weapons}">
+				<span th:text="${weapon.name}"> Name </span>
+			</li>
+		</ul>
+		
+		<div id="rooms">
+			<div class="room" th:each="room : ${rooms}">
+				<img selectable="false" draggable="false" th:src="@{${'/rooms/' + room.src}}" th:title="${room.name}" th:alt="${room.name}">
+			</div>
+		</div>
+	</body>
+</html>
